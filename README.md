@@ -1,53 +1,39 @@
-# [数据库设计]
+# [database](https://github.com/onelazyteam/blog/tree/master/database)
 
-## [优化器](https://github.com/onelazyteam/blog/blob/master/database-design/optimizer/optimizer.md)
+## [dataBase design](https://github.com/onelazyteam/blog/tree/master/database/database-design/)
 
-## [执行器]()
+### 	[executor](https://github.com/onelazyteam/blog/tree/master/database/database-design/executor)
 
-## [存储引擎]()
+### 	[optimizer](https://github.com/onelazyteam/blog/tree/master/database/database-design/optimizer)
 
-## [事务]()
-
-## [备份]()
-
-------
+### 	[grammar](https://github.com/onelazyteam/blog/tree/master/database/database-design/lex-gram)
 
 
 
-# [pg系数据库]
+## [pg database](https://github.com/onelazyteam/blog/tree/master/database/pg_database)
 
-## [postgres]()
+### 
 
-## [openGauss]()
-
-## [Greenplun/HAWQ]()
-
-------
+# [llm/ai](https://github.com/onelazyteam/blog/tree/master/ai)
 
 
 
-# [性能优化]
-
-------
+# [development-tools](https://github.com/onelazyteam/blog/tree/master/development-tools)
 
 
 
-# [读书笔记]
-
-------
+# [performance-optimization](https://github.com/onelazyteam/blog/tree/master/performance-optimization)
 
 
 
-# [编程]
-
-------
+# [reading-notes](https://github.com/onelazyteam/blog/tree/master/reading-notes)
 
 
 
-# [分布式]
-
-------
+# [programming](https://github.com/onelazyteam/blog/tree/master/programming)
 
 
 
-# [开发工具]
+# [distributed](https://github.com/onelazyteam/blog/tree/master/distributed)
+
+
