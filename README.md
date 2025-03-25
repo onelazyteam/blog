@@ -1,23 +1,23 @@
 # [database](https://github.com/onelazyteam/blog/tree/master/database)
 
-## [dataBase design](https://github.com/onelazyteam/blog/tree/master/database/database-design/)
+## 1. [dataBase design](https://github.com/onelazyteam/blog/tree/master/database/database-design/)
 
-### 	[executor](https://github.com/onelazyteam/blog/tree/master/database/database-design/executor)
+### 	1.1 [executor](https://github.com/onelazyteam/blog/tree/master/database/database-design/executor)
 
-### 	[optimizer](https://github.com/onelazyteam/blog/tree/master/database/database-design/optimizer)
+### 	1.2 [optimizer](https://github.com/onelazyteam/blog/tree/master/database/database-design/optimizer)
 
-### 	[grammar](https://github.com/onelazyteam/blog/tree/master/database/database-design/lex-gram)
+### 	1.3 [grammar](https://github.com/onelazyteam/blog/tree/master/database/database-design/lex-gram)
 
 
 
-## [pg database](https://github.com/onelazyteam/blog/tree/master/database/pg_database)
+## 2. [pg database](https://github.com/onelazyteam/blog/tree/master/database/pg_database)
 
-## [pgvector](https://github.com/onelazyteam/blog/tree/master/database/pgvector)
+## 3. [pgvector](https://github.com/onelazyteam/blog/tree/master/database/pgvector)
 
-### 
+
 
 # [llm/ai](https://github.com/onelazyteam/blog/tree/master/ai)
-## [rag](https://github.com/onelazyteam/blog/tree/master/ai/rag)
+## 1. [rag](https://github.com/onelazyteam/blog/tree/master/ai/rag)
 
 
 
@@ -38,5 +38,4 @@
 
 
 # [distributed](https://github.com/onelazyteam/blog/tree/master/distributed)
-
 
