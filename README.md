@@ -12,7 +12,7 @@
 
 ## 2. [pg database](https://github.com/onelazyteam/blog/tree/master/database/pg_database)
 
-## 3. [pgvector](https://github.com/onelazyteam/blog/tree/master/database/pgvector)
+## 3. [vectordb](https://github.com/onelazyteam/blog/tree/master/database/vectordb)
 
 
 
