@@ -12,9 +12,12 @@
 
 ## [pg database](https://github.com/onelazyteam/blog/tree/master/database/pg_database)
 
+## [pgvector](https://github.com/onelazyteam/blog/tree/master/database/pgvector)
+
 ### 
 
 # [llm/ai](https://github.com/onelazyteam/blog/tree/master/ai)
+## [rag](https://github.com/onelazyteam/blog/tree/master/ai/rag)
 
 
 
