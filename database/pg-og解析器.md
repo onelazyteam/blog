@@ -1,50 +1,70 @@
-### postgres/openGauss前端(词法语法语义)处理流程
+## postgres/openGauss解析器(词法语法语义)处理流程
+### Lex&YACC or Flex&Bison
+####	它们是什么关系？
+​		Flex就是由Vern Paxon实现的一个Lex，Bison则是GNU版本的YACC，flex和bison是GNU/Linux下的Lex&YACC。
+#### 	它们可以做什么？
+​		可以解析语言，打造自己的解析器。
 
+### postgreSQL解析器
 ​	backend进程收到client传过来的SQL字符串之后，传递给parser，词法分析器(scan.l)将字符串打散成一个个的token（单词），语法分析器依次读取token并适配对应的语法规则(gram.y)然后生成抽象语法树。
-
 ​	语义分析模块收到抽象语法树做相应转换处理生成查询树传递给优化器。
 
 ![image-20210611172145036](structure.png)
 
-#### Lex&YACC or Flex&Bison
+###	代码路径
 
-##### 	它们是什么关系？
+​		相关代码在`src/backend/parser`下的`scan.l`和`gram.y`。
 
-​		Flex就是由Vern Paxon实现的一个Lex，Bison则是GNU版本的YACC，flex和bison是GNU/Linux下的Lex&YACC
+#### parser.c
+  解析器的入口，入口函数为`raw_parser`，负责调用词法分析器scan.l、语法分析器gram.y和语义分析器analyze.c。
+##### scan.l
+  词法分析器，通过flex工具，识别标识符，SQL关键字等，对于发现的每个关键字或者标识符都会生成一个记号并且传递给语法分析器。
+#### gram.y
+  语法分析器，包含一套语法规则和触发规则时执行的动作，通过Bison工具将词法传过来的tokens解析为抽象语法树。
+#### scansup.c
+  提供几个词法分析时常用的函数。`scanstr`函数处理转义字符，`downcase_truncate_identifier`函数将大写英文字符转换为小写字符，`truncate_identifier`函数截断超过最大标识符长度的标识符，`scanner_isspace`函数判断输入字符是否为空白字符。
+#### analyze.c
+  将`gram.y`生成的抽象语法树转换为查询树(Query Tree)，对查询进行语义分析，例如类型检查、名称解析、权限检查等。
+#### parse_agg.c
+  处理聚合函数和窗口函数。
+#### parse_clause.c
+  处理SQL中的WHERE、ORDER BY、GROUP BY 等。
+#### parse_enr.c
+  处理"临时命名的关系"，例如触发器中的OLD/NEW等，让解析器能识别并引用这些并没有出现在数据库中的表。
+#### parse_jsontable.c
+  标准 SQL/JSON 函数 JSON_TABLE 的解析与转换，将原始的 JsonTable 节点转成内部的 TableFunc 结构，并生成相应的 JsonTablePlan，以支持后续的查询计划生成。
+#### parse_merge.c
+  处理Merge语句。
+#### parse_coerce.c
+  负责解析和处理表达式中的类型强制转换。
+#### parse_collate.c
+  处理排序规则。
+#### parse_cte.c
+  处理公共表表达式（WITH 子句）。
+#### parse_expr.c
+  解析和处理各种表达式。
+#### parse_func.c
+  处理函数以及表列等标识符。
+#### parse_node.c
+  创建解析数节点。
+#### parse_oper.c
+  处理表达式中的运算符。
+#### parse_param.c
+  处理参数化语句中的参数，比如预编译中的$1,$2等。
+#### parse_relation.c
+  处理表和列。
+#### parse_target.c
+  处理查询中的输出列。
+#### parse_type.c
+  数据类型处理函数。
+#### parse_utilcmd.c
+  处理Utility语句。
 
-##### 	它们可以做什么？
-
-​		可以解析语言，打造自己的解析器
-
-#### 词法语法分析
-
-##### 	代码路径
-
-​		相关代码在backend/parser下的scan.l和gram.y。其中：
-
-​		**词法分析器**在文件**scan.l**里定义。负责识别标识符，SQL 关键字等，对于发现的每个关键字或者标识符都会生成一个记号并且传递给语法分析器
-
-​		**语法分析器**在文件**gram.y**里定义。包含一套语法规则和触发规则时执行的动作
-
-​		在**raw_parser**函数(在backend/parser/parser.c)中，主要通过调用Lex和Yacc配合生成的base_yyparse函数来实现词法分析和语法分析的工作。
-
-​		其它重要的文件如下：
-
-​		**kwlookup.cpp**：提供ScanKeywordLookup函数，该函数判断输入的字符串是否是关键字，若是则返回单词表中对应单词的指针；
-
-​		**scansup.cpp**：提供几个词法分析时常用的函数。scanstr函数处理转义字符，downcase_truncate_identifier函数将大写英文字符转换为小写字符，truncate_identifier函数截断超过最大标识符长度的标识符，scanner_isspace函数判断输入字符是否为空白字符。
-
-​		**scan.l**：定义词法结构，编译生成scan.inc/scan.c；
-
-​		**gram.y**：定义语法结构，编译生成gram.cpp；
-
-​		**gram.hpp**：定义关键字的数值编号。
-
-##### 	调用关系图
+### 	调用关系图
 
 ![image-20210613152506770](flow.png)
 
-##### 	代码栈
+### 	代码栈
 
 ```c++
 #0  raw_parser (str=0xfffc8444c060 "select * from test;", query_string_locationlist=0xfffc85d579e8) at parser.cpp:44
@@ -53,7 +73,7 @@
 #2  0x00000000015c7968 in exec_simple_query (query_string=0xfffc8444c060 "select * from test;", messageType=QUERY_MESSAGE,
     msg=0xfffc85d57c28) at postgres.cpp:2192
 #3  0x00000000015d57b4 in PostgresMain (argc=1, argv=0xfffc838d6e48, dbname=0xfffc838d61f8 "postgres",
-    username=0xfffc838d61b0 "yanghao") at postgres.cpp:7903
+    username=0xfffc838d61b0 "xxx") at postgres.cpp:7903
 #4  0x0000000001537ef8 in BackendRun (port=0xfffc85d581e8) at postmaster.cpp:6989
 #5  0x0000000001545e1c in GaussDbThreadMain<(knl_thread_role)1> (arg=0xfffcc7e81dd8) at postmaster.cpp:10164
 #6  0x0000000001541f14 in InternalThreadFunc (args=0xfffcc7e81dd8) at postmaster.cpp:10629
@@ -62,7 +82,7 @@
 #9  0x0000fffcf584954c in ?? () from /lib64/libc.so.6
 ```
 
-#### 语义分析
+### 语义分析
 
 ​	语义分析阶段会检查命令中是否有不符合语义规则的成分。主要作用是为了检查命令是否可以正确的执行。
 
@@ -131,7 +151,7 @@ default                     作为Unility类型处理，直接在分析树上封
 
 ​	这样以后就得到了一个查询命令的查询树Query（查询树的结构后续由优化器讲解）。
 
-##### 	代码栈
+#### 	代码栈
 
 ```C
 (gdb) bt
@@ -154,7 +174,7 @@ default                     作为Unility类型处理，直接在分析树上封
 #11 0x0000fffcf584954c in ?? () from /lib64/libc.so.6
 ```
 
-#### 参考文献
+### 参考文献
 
 《PostgreSQL数据库内核分析》
 

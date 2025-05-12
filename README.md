@@ -1,43 +1,60 @@
-# [database](https://github.com/onelazyteam/blog/tree/master/database)
+# [数据库](https://github.com/onelazyteam/blog/tree/master/database)
 
-## 1. [dataBase design](https://github.com/onelazyteam/blog/tree/master/database/database-design/)
+##### [postgresql JIT](https://github.com/onelazyteam/blog/blob/master/database/PostgreSQL17_JIT_Architecture_and_Design.md)
 
-### 	1.1 [executor](https://github.com/onelazyteam/blog/tree/master/database/database-design/executor)
+##### [优化器总结](https://github.com/onelazyteam/blog/blob/master/database/%E4%BC%98%E5%8C%96%E5%99%A8%E4%BB%8B%E7%BB%8D.md)
 
-### 	1.2 [optimizer](https://github.com/onelazyteam/blog/tree/master/database/database-design/optimizer)
+##### [执行器总结](https://github.com/onelazyteam/blog/blob/master/database/%E6%89%A7%E8%A1%8C%E5%99%A8.md)
 
-### 	1.3 [grammar](https://github.com/onelazyteam/blog/tree/master/database/database-design/lex-gram)
+##### [怎么实现一个向量化执行器](https://github.com/onelazyteam/blog/blob/master/database/how-to-implement-a-vectorized-executor.md)
+
+##### 	[openGauss执行器介绍](https://github.com/onelazyteam/blog/blob/master/database/openGauss%E6%89%A7%E8%A1%8C%E5%99%A8%E6%B5%81%E7%A8%8B.md)
+
+##### 	[openGauss自定义函数及存储过程](https://github.com/onelazyteam/blog/blob/master/database/openGauss%E8%87%AA%E5%AE%9A%E4%B9%89%E5%87%BD%E6%95%B0%E5%92%8C%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B%E8%A7%A3%E6%9E%90.md)
+
+##### [postgres openGauss解析器](https://github.com/onelazyteam/blog/blob/master/database/pg-og%E8%A7%A3%E6%9E%90%E5%99%A8.md)
+
+##### [postgresql基础总结](https://github.com/onelazyteam/blog/blob/master/database/postgres%E6%80%BB%E7%BB%93.md)
+
+##### [MySQL总结](https://github.com/onelazyteam/blog/blob/master/database/mysql_summarize.md)
 
 
-
-## 2. [pg database](https://github.com/onelazyteam/blog/tree/master/database/pg_database)
-
-## 3. [vectordb](https://github.com/onelazyteam/blog/tree/master/database/vectordb)
-
-
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-# [llm/ai](https://github.com/onelazyteam/blog/tree/master/ai)
-## 1. [rag](https://github.com/onelazyteam/blog/tree/master/ai/rag)
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-# [development-tools](https://github.com/onelazyteam/blog/tree/master/development-tools)
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# [performance-optimization](https://github.com/onelazyteam/blog/tree/master/performance-optimization)
+# [性能优化](https://github.com/onelazyteam/blog/tree/master/performance-optimization)
+
+##### [编译器PGO](https://github.com/onelazyteam/blog/blob/master/performance-optimization/%E7%BC%96%E8%AF%91%E5%99%A8PGO%E6%8A%80%E6%9C%AF%E6%98%AF%E4%BB%80%E4%B9%88.md)
+
+##### [make-your-programs-run-faster](https://github.com/onelazyteam/blog/blob/master/performance-optimization/make-your-programs-run-faster.md)
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# [reading-notes](https://github.com/onelazyteam/blog/tree/master/reading-notes)
+
+
+# [读书学习笔记](https://github.com/onelazyteam/blog/tree/master/reading-notes)
+
+##### [分布式数据库总结](https://github.com/onelazyteam/blog/tree/master/reading-notes/%E5%88%86%E5%B8%83%E5%BC%8F%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AF%BE%E7%A8%8B)
+
+##### [数据密集型应用系统设计](https://github.com/onelazyteam/blog/tree/master/reading-notes/%E6%95%B0%E6%8D%AE%E5%AF%86%E9%9B%86%E5%9E%8B%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1)
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# [programming](https://github.com/onelazyteam/blog/tree/master/programming)
+
+
+# [编程](https://github.com/onelazyteam/blog/tree/master/programming)
+
+##### [io_uring介绍](https://github.com/onelazyteam/blog/blob/master/programming/io_uring%20%E4%BB%8B%E7%BB%8D%E4%BB%A5%E5%8F%8A%E7%A4%BA%E4%BE%8B.markdown)
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# [distributed](https://github.com/onelazyteam/blog/tree/master/distributed)
+
+
+# [工具](https://github.com/onelazyteam/blog/tree/master/development-tools)
+
+##### [asan介绍](https://github.com/onelazyteam/blog/tree/master/development-tools/analyze_memory_issues_in_C_C++.md)
+
+##### [memory leak debug](https://github.com/onelazyteam/blog/tree/master/development-tools/memory_leak_debug.md)
+
+##### [perf tool](https://github.com/onelazyteam/blog/tree/master/development-tools/about_perf.md)
 
