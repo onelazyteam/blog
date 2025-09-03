@@ -10,8 +10,6 @@
 
 ##### 	[openGauss自定义函数及存储过程](https://github.com/onelazyteam/blog/blob/master/database/openGauss%E8%87%AA%E5%AE%9A%E4%B9%89%E5%87%BD%E6%95%B0%E5%92%8C%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B%E8%A7%A3%E6%9E%90.md)
 
-##### [pg_vector向量数据库](https://github.com/onelazyteam/blog/blob/master/database/pg_vector.md)
-
 ##### [PostgreSQL JIT框架介绍](https://github.com/onelazyteam/blog/blob/master/database/PostgreSQL17-JIT.md)
 
 ##### [PostgreSQL表达式框架](https://github.com/onelazyteam/blog/blob/master/database/PostgreSQL-Expr.md)
@@ -21,10 +19,6 @@
 ##### [PostgreSQL openGauss解析器](https://github.com/onelazyteam/blog/blob/master/database/pg-og%E8%A7%A3%E6%9E%90%E5%99%A8.md)
 
 ##### [PostgreSQL基础总结](https://github.com/onelazyteam/blog/blob/master/database/postgres%E6%80%BB%E7%BB%93.md)
-
-##### 
-
-## HAWQ/GreenPlum
 
 
 
@@ -54,13 +48,19 @@
 
 
 
+## 向量数据库
+
+##### [pg_vector向量数据库](https://github.com/onelazyteam/blog/blob/master/vectordb/pg_vector.md)
+
+
+
 ## 优化器
 
 ##### [优化器总结](https://github.com/onelazyteam/blog/blob/master/database/%E4%BC%98%E5%8C%96%E5%99%A8%E4%BB%8B%E7%BB%8D.md)
 
 
 
-## 存储引擎
+# [存储引擎](https://github.com/onelazyteam/blog/tree/master/storage)
 
 ##### [PAX格式介绍](https://github.com/onelazyteam/blog/blob/master/database/pax-format.md)
 
