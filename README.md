@@ -62,7 +62,7 @@
 
 # [存储引擎](https://github.com/onelazyteam/blog/tree/master/storage)
 
-##### [PAX格式介绍](https://github.com/onelazyteam/blog/blob/master/database/pax-format.md)
+##### [PAX格式介绍](https://github.com/onelazyteam/blog/blob/master/storage/pax-format.md)
 
 
 
