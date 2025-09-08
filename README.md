@@ -64,6 +64,8 @@
 
 ##### [PAX格式介绍](https://github.com/onelazyteam/blog/blob/master/storage/pax-format.md)
 
+##### [ORC format介绍](https://github.com/onelazyteam/blog/blob/master/storage/orc-format.md)
+
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
