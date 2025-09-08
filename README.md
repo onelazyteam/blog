@@ -66,6 +66,8 @@
 
 ##### [ORC format介绍](https://github.com/onelazyteam/blog/blob/master/storage/orc-format.md)
 
+##### [Parquet format介绍](https://github.com/onelazyteam/blog/blob/master/storage/parquet-format.md)
+
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
