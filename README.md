@@ -74,6 +74,12 @@
 
 
 
+## [LevelDB/RocksDB](https://github.com/onelazyteam/blog/tree/master/storage/leveldb-rocksdb)
+
+##### [LevelDB编译以及示例](https://github.com/onelazyteam/blog/blob/master/storage/leveldb-rocksdb/leveldb-compile-and-first-example.md)
+
+
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # [性能优化](https://github.com/onelazyteam/blog/tree/master/performance-optimization)
