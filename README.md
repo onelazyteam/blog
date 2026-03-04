@@ -56,6 +56,8 @@
 
 ##### [pg_vector向量数据库](https://github.com/onelazyteam/blog/blob/master/vectordb/pg_vector.md)
 
+##### [IVFFlat](https://github.com/onelazyteam/blog/blob/master/vectordb/IVFFlat.md)
+
 
 
 ## 优化器

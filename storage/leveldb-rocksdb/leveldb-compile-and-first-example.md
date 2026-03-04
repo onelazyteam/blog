@@ -61,3 +61,8 @@ clang++ -o leveldb_demo leveldb.cpp -pthread -lleveldb -std=c++17
 ./leveldb_demo
 读取到的与(key=apple)对应的(value=A)
 ```
+
+#### 生成目录文件介绍
+
+![image-20251023101350793](./db-file.png)
+
